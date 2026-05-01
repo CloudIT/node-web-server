@@ -41,22 +41,24 @@ hbs.registerHelper('screamIt', (text) => {
 });
 
 app.get('/', (req, res) => {
-  // res.send('<h1>Hello Express!</h1>');
   res.render('home.hbs', {
-    pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to the home page.'
+    pageTitle: 'Home',
+    activePage: 'home',
+    welcomeMessage: 'Practical cloud and DevOps engineering, built to outlast the engagement.'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page',
+    pageTitle: 'About',
+    activePage: 'about'
   });
 });
 
 app.get('/projects', (req, res) => {
   res.render('projects.hbs', {
-    pageTitle: 'Projects Page',
+    pageTitle: 'Projects',
+    activePage: 'projects'
   });
 });
 

@@ -1,14 +1,34 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{pageTitle}}</title>
-  </head>
-  <body>
-    {{> header}}
+{{> head}}
 
-    <p>Portfolio information here</p>
+<section class="hero">
+  <span class="hero__eyebrow">Projects</span>
+  <h1>{{pageTitle}}</h1>
+  <p>A snapshot of recent engagements across cloud migration, platform engineering, and developer tooling.</p>
+</section>
 
-    {{> footer}}
-  </body>
-</html>
+<section>
+  <div class="card-grid">
+    <article class="card">
+      <span class="card__tag">Migration</span>
+      <h3>Lift-and-shift to AWS</h3>
+      <p>Migrated a multi-region monolith to ECS Fargate with zero-downtime cutover.</p>
+    </article>
+    <article class="card">
+      <span class="card__tag">Platform</span>
+      <h3>Internal developer platform</h3>
+      <p>Self-serve environments and golden-path templates that cut ramp time from weeks to days.</p>
+    </article>
+    <article class="card">
+      <span class="card__tag">Observability</span>
+      <h3>Unified telemetry</h3>
+      <p>Consolidated logs, metrics, and traces into a single pane with cost-aware retention.</p>
+    </article>
+    <article class="card">
+      <span class="card__tag">Security</span>
+      <h3>Secrets &amp; SSO rollout</h3>
+      <p>Centralized secret management and SSO for 30+ internal services.</p>
+    </article>
+  </div>
+</section>
+
+{{> footer}}

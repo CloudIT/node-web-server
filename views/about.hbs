@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{pageTitle}}</title>
-  </head>
-  <body>
-    {{> header}}
-    <p>Some text here</p>
-    {{> footer}}
-  </body>
-</html>
+{{> head}}
+
+<section class="hero">
+  <span class="hero__eyebrow">About</span>
+  <h1>{{pageTitle}}</h1>
+</section>
+
+<section class="about-grid">
+  <div>
+    <h2>Who we are</h2>
+    <p>Cloud IT helps teams ship reliable infrastructure without the overhead. We pair hands-on engineering with practical strategy, so the systems we build keep running long after we hand them off.</p>
+    <p>Founded on the idea that good ops should feel boring in the best way, we focus on long-lived patterns over hype.</p>
+  </div>
+  <div>
+    <h2>How we work</h2>
+    <ul class="feature-list">
+      <li>Plan together, ship in small steps.</li>
+      <li>Document decisions, not just code.</li>
+      <li>Treat security as a default, not a phase.</li>
+      <li>Hand off cleanly &mdash; no &ldquo;only-we-know-it&rdquo; systems.</li>
+    </ul>
+  </div>
+</section>
+
+{{> footer}}

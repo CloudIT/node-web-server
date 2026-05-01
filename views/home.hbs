@@ -1,14 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{pageTitle}}</title>
-  </head>
-  <body>
-    {{> header}}
+{{> head}}
 
-    <p>{{screamIt welcomeMessage}}</p>
+<section class="hero">
+  <span class="hero__eyebrow">Cloud IT</span>
+  <h1>Infrastructure that gets out of your way.</h1>
+  <p>{{welcomeMessage}}</p>
+  <a href="/projects" class="btn">See our work</a>
+  <a href="/about" class="btn btn--ghost">About us</a>
+</section>
 
-    {{> footer}}
-  </body>
-</html>
+<section class="section">
+  <h2>What we do</h2>
+  <div class="card-grid">
+    <article class="card">
+      <span class="card__tag">Cloud</span>
+      <h3>Cloud architecture</h3>
+      <p>Designs that scale on AWS, Azure, and GCP without lock-in surprises.</p>
+    </article>
+    <article class="card">
+      <span class="card__tag">DevOps</span>
+      <h3>CI/CD pipelines</h3>
+      <p>Repeatable builds, automated tests, and zero-downtime deploys.</p>
+    </article>
+    <article class="card">
+      <span class="card__tag">Security</span>
+      <h3>Security reviews</h3>
+      <p>Audit trails, secret hygiene, and dependency hardening built in.</p>
+    </article>
+  </div>
+</section>
+
+{{> footer}}
