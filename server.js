@@ -1,9 +1,12 @@
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 const hbs = require('hbs');
 const fs = require('fs');
 
 const port = process.env.PORT || 3000;
 var app = express();
+
+app.use(rateLimit({ windowMs: 15 * 60 * 1000, limit: 100 }));
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
